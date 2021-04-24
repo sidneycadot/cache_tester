@@ -61,7 +61,7 @@ void * worker(void *arg)
             uint8_t * b = &wi->mem[rand() % (wi->memsize - sz)];
             uint8_t tmp[sz];
             memcpy(tmp, a, sz);
-            memcpy(a, b, sz);
+            memmove(a, b, sz);
             memcpy(b, tmp, sz);
         }
 
